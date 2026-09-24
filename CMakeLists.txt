@@ -23,5 +23,5 @@ target_link_libraries(lab_1 sfml-graphics)
 #### Practical 2 ####
 add_executable(lab_2 practical_2/main.cpp)
 target_include_directories(lab_2 PRIVATE ${SFML_INCS})
-target_link_libraries(lab_2 sfml-graphics)
+target_link_libraries(lab_2 sfml-graphics)  
 
