@@ -52,3 +52,7 @@ add_executable(physics practical_5_physics/main.cpp)
 target_include_directories(physics SYSTEM PRIVATE ${SFML_INCS} ${B2D_INCS})
 target_link_libraries(physics box2d sfml-graphics)
 set(EXECUTABLES ${EXECUTABLES} practical_5_physics)
+# practical 5
+add_executable(practical_5 practical_5/main.cpp)
+target_include_directories(practical_5 PRIVATE ${SFML_INCS} practical_5)
+target_link_libraries(practical_5 sfml-graphics)
