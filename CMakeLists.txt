@@ -41,3 +41,14 @@ add_executable(space_invaders
 target_include_directories(space_invaders PRIVATE ${SFML_INCS} practical_3)
 target_link_libraries(space_invaders sfml-graphics)
 add_dependencies(space_invaders copy_resources)
+
+#BOX2D
+add_subdirectory("lib/box2d")
+set (B2D_INCS "lib/box2d/include")
+link_directories("${CMAKE_BINARY_DIR}/lib/box2d/lib")
+
+#physics 
+add_executable(physics practical_5_physics/main.cpp)
+target_include_directories(physics SYSTEM PRIVATE ${SFML_INCS} ${B2D_INCS})
+target_link_libraries(physics box2d sfml-graphics)
+set(EXECUTABLES ${EXECUTABLES} practical_5_physics)

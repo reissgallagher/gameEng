@@ -1,7 +1,11 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 #include <vector>
 #include <memory>
+
+namespace sf {
+class Texture;
+class RenderWindow;
+}
 
 class Ship; // Forward declaration
 
